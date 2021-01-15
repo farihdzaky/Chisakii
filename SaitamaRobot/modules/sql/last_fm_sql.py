@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String
 
-from Saitamarobot.modules.sql import BASE, SESSION
+from SaitamaRobot.modules.sql import BASE, SESSION
 
 
 class LastFMUsers(BASE):
