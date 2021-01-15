@@ -202,22 +202,18 @@ def start(update: Update, context: CallbackContext):
                         InlineKeyboardButton(
                             text="Add to your group 👥",
                             url="t.me/{}?startgroup=true".format(
-                                context.bot.username))
+                                context.bot.username)),
+                        InlineKeyboardButton(
+                            text="Support Group 🎗️",
+                            url=f"https://t.me/{SUPPORT_CHAT}")
                     ],
                      [
                          InlineKeyboardButton(
-                             text="Support Group 🎗️",
-                             url=f"https://t.me/{SUPPORT_CHAT}")
-                     ],
-                     [
-                         InlineKeyboardButton(
                              text="Getting started guide 🧾",
-                             url="https://t.me/OnePunchUpdates/29")
-                     ],
-                     [
+                             url="https://t.me/OnePunchUpdates/29"),
                          InlineKeyboardButton(
                              text="Source code 🗄",
-                             url="https://github.com/Anomaliii/KaiRobot")
+                             url="https://github.com/Anomaliii/KaiRobot")        
                      ]]))
     else:
         update.effective_message.reply_text(
