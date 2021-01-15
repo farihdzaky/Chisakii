@@ -158,7 +158,7 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    LASTFM_API_KEY = Config.LAST_API_KEY
+    LASTFM_API_KEY = Config.LASTFM_API_KEY
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
