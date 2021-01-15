@@ -185,7 +185,7 @@ def unapproveall_btn(update: Update, context: CallbackContext):
         if member.status == "member":
             query.answer("You need to be admin to do this.")
 
-from tg_bot.modules.language import gs
+from SaitamaRobot.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "approve_help")
