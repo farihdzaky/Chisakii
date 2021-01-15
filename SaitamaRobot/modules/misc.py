@@ -97,6 +97,11 @@ Example:
       _OR_
  `/cash 1 usd inr`
 Output: `1.0 USD = 75.505 INR`
+*Last FM:*
+ • `/setuser` <username> *:* sets your last.fm username.
+ • `/clearuser` *:* removes your last.fm username from the bot's database.
+ • `/lastfm` *:* returns what you're scrobbling on last.fm.
+
 """
 
 ECHO_HANDLER = DisableAbleCommandHandler("echo", echo, filters=Filters.group)
