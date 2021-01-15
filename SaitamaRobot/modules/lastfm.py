@@ -5,10 +5,10 @@ import requests
 from telegram import Update, ParseMode
 from telegram.ext import run_async, CommandHandler, CallbackContext
 
-from Saitamarobot import dispatcher, LASTFM_API_KEY
-from Saitamarobot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot import dispatcher, LASTFM_API_KEY
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 
-import Saitamarobot.modules.sql.last_fm_sql as sql
+import SaitamaRobot.modules.sql.last_fm_sql as sql
 
 
 @run_async
