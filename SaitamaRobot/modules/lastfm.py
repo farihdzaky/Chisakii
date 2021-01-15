@@ -8,7 +8,7 @@ from telegram.ext import run_async, CommandHandler, CallbackContext
 from Saitamarobot import dispatcher, LASTFM_API_KEY
 from Saitamarobot.modules.disable import DisableAbleCommandHandler
 
-import lynda.modules.sql.last_fm_sql as sql
+import Saitamarobot.modules.sql.last_fm_sql as sql
 
 
 @run_async
