@@ -59,7 +59,7 @@ Join Our [Group](https://t.me/ZeroBotSupport) If You wanna Report Issue 🙂
 I'm here to make your group management fun and easy!
 I have lots of handy features ☺️ such as :
 
-• flood control.            • Note'S keeping system.
+• flood control.           • Note'S keeping system.
 • Warning System.   • Predetermined Filters.
 
 *Managed With ❤️ By :* [Zero](https://t.me/Anomaliii)
