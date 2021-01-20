@@ -51,7 +51,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey there! my name is *{}*.
+Hi {}, my name is {}!
 Any questions on how to use me? use /help
 
 Join Our [Group](https://t.me/ZeroBotSupport) If You wanna Report Issue 🙂
