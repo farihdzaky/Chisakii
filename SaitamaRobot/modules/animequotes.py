@@ -24,14 +24,14 @@ __help__ = """
  • `/aq`*:* gives random anime quotes
  
 """
-AQ_HANDLER = DisableAbleCommandHandler("aq", aq)
+ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("animequotes", animequotes)
 
-dispatcher.add_handler(AQ_HANDLER)
+dispatcher.add_handler(ANIMEQUOTES_HANDLER)
 
 __mod_name__ = "Anime Quotes"
 __command_list__ = [
-    "aq"
+    "animequotes"
 ]
 __handlers__ = [
-    AQ_HANDLER
+    ANIMEQUOTES_HANDLER
 ]
