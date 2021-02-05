@@ -1,72 +1,40 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+from SaitamaRobot import DEV_USERS, DRAGONS, DEMONS
 from telegram import Message
-from telegram.ext import MessageFilter
-
-from ubotindo import SUPPORT_USERS, SUDO_USERS, DEV_USERS, 
+from telegram.ext import BaseFilter
 
 
 class CustomFilters(object):
-    class _Supporters(MessageFilter):
+    class _Supporters(BaseFilter):
         def filter(self, message: Message):
-            return bool(
-                message.from_user
-                and message.from_user.id in SUPPORT_USERS
-                or message.from_user
-                and message.from_user.id in SUDO_USERS
-                or message.from_user
-                and message.from_user.id in DEV_USERS
-            )
+            return bool(message.from_user and message.from_user.id in DEMONS)
 
     support_filter = _Supporters()
 
-    class _Sudoers(MessageFilter):
+    class _Sudoers(BaseFilter):
         def filter(self, message: Message):
-            return bool(
-                message.from_user
-                and message.from_user.id in SUDO_USERS
-                or message.from_user
-                and message.from_user.id in DEV_USERS
-            )
+            return bool(message.from_user and message.from_user.id in DRAGONS)
 
     sudo_filter = _Sudoers()
 
-    class _Devs(MessageFilter):
+    class _Developers(BaseFilter):
         def filter(self, message: Message):
-            return bool(
-                message.from_user and message.from_user.id in DEV_USERS
-            )
+            return bool(message.from_user and message.from_user.id in DEV_USERS)
 
-    dev_filter = _Devs()
+    dev_filter = _Developers()
 
-    class _MimeType(MessageFilter):
+    class _MimeType(BaseFilter):
         def __init__(self, mimetype):
             self.mime_type = mimetype
             self.name = "CustomFilters.mime_type({})".format(self.mime_type)
 
         def filter(self, message: Message):
             return bool(
-                message.document
-                and message.document.mime_type == self.mime_type
+                message.document and message.document.mime_type == self.mime_type
             )
 
     mime_type = _MimeType
 
-    class _HasText(MessageFilter):
+    class _HasText(BaseFilter):
         def filter(self, message: Message):
             return bool(
                 message.text
