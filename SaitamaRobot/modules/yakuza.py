@@ -600,8 +600,6 @@ Group admins/group owners do not need these commands.
  ╠ `/debug <on/off>`*:* Logs commands to updates.txt
  ╠ `/logs`*:* Run this in support group to get logs in pm
  ╠ `/eval`*:* Self explanatory
- ╠ `/sh`*:* Runs shell command
- ╠ `/shell`*:* Runs shell command
  ╠ `/clearlocals`*:* As the name goes
  ╠ `/dbcleanup`*:* Removes deleted accs and groups from db
  ╚ `/py`*:* Runs python code
@@ -647,7 +645,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-__mod_name__ = "Disasters"
+__mod_name__ = "Yakuza"
 __handlers__ = [
     SUDO_HANDLER, SUPPORT_HANDLER, TIGER_HANDLER, WHITELIST_HANDLER,
     UNSUDO_HANDLER, UNSUPPORT_HANDLER, UNTIGER_HANDLER, UNWHITELIST_HANDLER,
