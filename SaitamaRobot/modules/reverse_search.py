@@ -186,7 +186,7 @@ __help__ = f"""
 Reports bugs at @ZeroBotSupport
 """
 
-__mod_name__ = "Image Search"
+__mod_name__ = "Reverse"
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
     "reverse", reverse, pass_args=True, admin_ok=True
