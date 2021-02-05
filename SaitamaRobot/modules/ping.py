@@ -81,7 +81,7 @@ def ping(update: Update, context: CallbackContext):
 
     message.edit_text(
         "Pong!!!\n"
-        "</b> <code>{}</code>\n"
+        "</b></b> <code>{}</code>\n"
 
 
 @run_async
