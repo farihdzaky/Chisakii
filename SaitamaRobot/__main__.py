@@ -227,7 +227,9 @@ def start(update: Update, context: CallbackContext):
                      ]]))
     else:
         update.effective_message.reply_text(
-            "Hi! I'm Kai.
+            "Hi! I'm Kai
+            ),
+        )
 
 
 # for test purposes
