@@ -51,34 +51,24 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}!
-Any questions on how to use me? use /help
 
-Join Our [Group](https://t.me/ZeroBotSupport) If You wanna Report Issue 🙂
-
-I'm here to make your group management fun and easy!
-I have lots of handy features ☺️ such as :
-
-• flood control.           • Note'S keeping system.
-• Warning System.   • Predetermined Filters.
-
-*Managed With ❤️ By :* [Zero](https://t.me/Anomaliii)
-
-Wanna Add me to your Group? Just click the button below!
-"""
+Yo {} My name is levi ackerman
+I am the strongest person in the anime attack on titan
+I'll help you inside
+Manage groups.
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hey there! My name is Levi Ackerman.
 I'm an Anime Management Bot to help admins manage their groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+ ⚔️ /help: PM's you this message.
+ ⚔️ /help <module name>: PM's you info about that module.
+ ⚔️ /donate: information on how to donate!
+ ⚔️ /settings:
+   ⚔️ in PM: will send you your settings for all supported modules.
+   ⚔️ in a group: will redirect you to pm, with all that chat's settings.
 
 
 {}
@@ -87,7 +77,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/55b328ec75b76e139745c.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/21084f03bde0c8c6b9256.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Kai is hosted on one of Own's Servers and doesn't require any donations as of now but \
@@ -210,24 +200,24 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add to your group 👥",
+                            text="Add Levi to your group ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                         InlineKeyboardButton(
-                             text="Support Group 🎗️",
-                             url=f"https://t.me/{SUPPORT_CHAT}")
+                             text="Support Group ⚔️",
+                             url=f"https://t.me/leviackermannsupport")
                     ],
                      [
                          InlineKeyboardButton(
                              text="Getting started guide 🧾",
                              url="https://t.me/OnePunchUpdates/29"),
                          InlineKeyboardButton(
-                             text="Source code 🗄",
-                             url="https://github.com/Anomaliii/KaiRobot")
+                             text="👩‍💻 Help",
+                             url="https://t.me/{}?start=help")
                      ]]))
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "Yo Baka!".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
